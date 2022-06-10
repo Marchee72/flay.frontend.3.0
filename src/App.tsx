@@ -1,12 +1,9 @@
-import SignInSide from "./views/SignInSide";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom';
 import { Component } from "react";
+import {
+  BrowserRouter as Router, Route, Routes
+} from 'react-router-dom';
 import Home from "./views/Home";
+import SignInSide from "./views/SignInSide";
 
 
 class App extends Component {
@@ -14,19 +11,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <ul className="App-header">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Us</Link>
-            </li>
-          </ul>
           <Routes>
-            <Route path='/SignIn' element={< SignInSide />}></Route>
+            <Route path='/signin' element={< SignInSide />}></Route>
             <Route path='/' element={< Home />}></Route>
           </Routes>
         </div>
